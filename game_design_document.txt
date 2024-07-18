@@ -1,0 +1,10 @@
+magicka like
+	as in: mixes spells mid combat
+
+tile based
+
+rougelike
+
+health is visibility?
+
+turn based?

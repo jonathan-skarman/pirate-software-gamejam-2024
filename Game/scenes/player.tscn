@@ -1,7 +1,76 @@
-[gd_scene format=3 uid="uid://cn2g1lyjv5ig7"]
+[gd_scene load_steps=11 format=3 uid="uid://cn2g1lyjv5ig7"]
+
+[ext_resource type="Texture2D" uid="uid://ba4wpfnskn37x" path="res://assets/Alchemist-Walk.png" id="1_oob1v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t245k"]
+atlas = ExtResource("1_oob1v")
+region = Rect2(0, 0, 34, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_su1os"]
+atlas = ExtResource("1_oob1v")
+region = Rect2(36, 0, 34, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0n7py"]
+atlas = ExtResource("1_oob1v")
+region = Rect2(72, 0, 34, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6ewy"]
+atlas = ExtResource("1_oob1v")
+region = Rect2(108, 0, 34, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1mf84"]
+atlas = ExtResource("1_oob1v")
+region = Rect2(144, 0, 34, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtyca"]
+atlas = ExtResource("1_oob1v")
+region = Rect2(180, 0, 34, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3i3b8"]
+atlas = ExtResource("1_oob1v")
+region = Rect2(216, 0, 34, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_878gn"]
+atlas = ExtResource("1_oob1v")
+region = Rect2(252, 0, 34, 35)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4j4ne"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t245k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_su1os")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0n7py")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g6ewy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1mf84")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jtyca")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3i3b8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_878gn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.66
+}]
 
 [node name="Player" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_4j4ne")
+frame_progress = 0.222213
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

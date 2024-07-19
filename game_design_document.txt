@@ -8,3 +8,11 @@ rougelike
 health is visibility?
 
 turn based?
+
+strategy game - crypt of the necrodancer movement but without timing
+
+deck builder???
+spell components as cards maybe?
+	or just make it an interface thing
+
+player chooses the ingredients and mixes into potions, and then throws

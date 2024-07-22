@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://bogywc7d1x7q0"]
+
+[ext_resource type="Texture2D" uid="uid://bwurfl3wvr2u1" path="res://assets/floor-wall.png" id="1_yg35j"]
+[ext_resource type="PackedScene" uid="uid://cxlm2r330c6dg" path="res://scenes/player.tscn" id="2_4wpsk"]
+[ext_resource type="PackedScene" uid="uid://d20jmhi853uo3" path="res://scenes/enemy.tscn" id="3_2yavr"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eqo6t"]
+texture = ExtResource("1_yg35j")
+margins = Vector2i(0, 16)
+separation = Vector2i(2, 0)
+texture_region_size = Vector2i(32, 32)
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:0/0 = 0
+0:0/0/custom_data_0 = true
+1:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_gh3ac"]
+tile_size = Vector2i(32, 32)
+custom_data_layer_0/name = "walkable"
+custom_data_layer_0/type = 1
+sources/0 = SubResource("TileSetAtlasSource_eqo6t")
+
+[node name="Main" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(16, 16)
+tile_set = SubResource("TileSet_gh3ac")
+rendering_quadrant_size = 32
+format = 2
+layer_0/tile_data = PackedInt32Array(-65536, 65536, 0, -65535, 65536, 0, -65534, 65536, 0, -65533, 65536, 0, -131069, 65536, 0, -131068, 65536, 0, -196604, 65536, 0, -262140, 65536, 0, -262139, 65536, 0, -327675, 65536, 0, -393211, 65536, 0, -458747, 65536, 0, -458748, 65536, 0, -458749, 65536, 0, -458750, 65536, 0, -458751, 65536, 0, -524287, 65536, 0, -524288, 65536, 0, -589824, 65536, 0, -524289, 65536, 0, -524290, 65536, 0, -524291, 65536, 0, -458755, 65536, 0, -458756, 65536, 0, -393220, 65536, 0, -393221, 65536, 0, -327685, 65536, 0, -262149, 65536, 0, -262148, 65536, 0, -262147, 65536, 0, -262146, 65536, 0, -327682, 65536, 0, -327681, 65536, 0, -262145, 65536, 0, -196609, 65536, 0, -131073, 65536, 0, 65533, 65536, 0, 131069, 65536, 0, 131070, 65536, 0, -131074, 65536, 0, -131075, 65536, 0, -196611, 65536, 0, -131076, 65536, 0, -65540, 65536, 0, -65541, 65536, 0, -5, 65536, 0, -4, 65536, 0, 65532, 65536, 0, 131071, 65536, 0, 65535, 65536, 0, 65534, 0, 0, -2, 0, 0, -1, 0, 0, -3, 0, 0, -65539, 0, 0, -65538, 0, 0, -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -196606, 0, 0, -196607, 0, 0, -196608, 0, 0, -262144, 0, 0, -327680, 0, 0, -393216, 0, 0, -393215, 0, 0, -327679, 0, 0, -262143, 0, 0, -262142, 0, 0, -196605, 0, 0, -262141, 0, 0, -327677, 0, 0, -393212, 0, 0, -327676, 0, 0, -393213, 0, 0, -393214, 0, 0, -327678, 0, 0, -458752, 0, 0, -393217, 0, 0, -458753, 0, 0, -458754, 0, 0, -393218, 0, 0, -393219, 0, 0, -327683, 0, 0, -327684, 0, 0)
+
+[node name="Player" parent="." instance=ExtResource("2_4wpsk")]
+position = Vector2(48, -80)
+
+[node name="Enemy" parent="." instance=ExtResource("3_2yavr")]
+position = Vector2(80, -144)

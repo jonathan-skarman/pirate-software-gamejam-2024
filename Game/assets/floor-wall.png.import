@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cti3s2fsd4wym"
-path="res://.godot/imported/Alchemist-Walk.png-8a19cdf4eea14ad8d6b11c0bfe7e4da7.ctex"
+uid="uid://bwurfl3wvr2u1"
+path="res://.godot/imported/floor-wall.png-cc77b9205333938fd7f31086d1e9a532.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Alchemist-Walk.png"
-dest_files=["res://.godot/imported/Alchemist-Walk.png-8a19cdf4eea14ad8d6b11c0bfe7e4da7.ctex"]
+source_file="res://assets/floor-wall.png"
+dest_files=["res://.godot/imported/floor-wall.png-cc77b9205333938fd7f31086d1e9a532.ctex"]
 
 [params]
 

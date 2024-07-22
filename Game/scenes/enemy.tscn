@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://d20jmhi853uo3"]
+
+[ext_resource type="Texture2D" uid="uid://cti3s2fsd4wym" path="res://assets/Alchemist-Walk.png" id="1_swy6a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_87855"]
+atlas = ExtResource("1_swy6a")
+region = Rect2(108, 0, 36, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4dbfd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_87855")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_akgj1"]
+size = Vector2(32, 32)
+
+[node name="Enemy" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4dbfd")
+flip_v = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_akgj1")
